@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheeku Bug Tracker</title>
+    <link rel="icon" href="chik.png">
+    <style>
+        #imgdiv{
+            margin-top: 20px;
+            margin-left: 150px;
+            margin-bottom: 30px;
+            margin-bottom: 50px;            
+        }
+        
+        #maindiv {
+            text-align: center;
+            background-color: #c2c8cc91;
+           border-radius: 30px;
+            margin-left: 420px;
+            margin-right: 400px;
+            padding: 10px 60px 60px 60px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;    
+        }
+
+        
+        .txtbox{
+            width: 390px;
+            height: 40px;
+            margin-top: 10px;
+            background-color: #F8F9F9;
+            border :1px solid #C2C8CC;
+        }
+        #bud_detail_border{
+            width: 380px;
+        }
+        #div1{
+         
+            background-color: #C2C8CC;
+            width: 100%;
+            height: 10px;
+        }
+       
+        h3{
+            color: #10363D;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        label{
+            color: #10363D;  
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;    
+        }
+        #btndiv{
+            width: 400px;
+            text-align: center;
+            background-color: #10363D;
+            height: 40px;
+            padding-top: 20px;
+            margin-top: 30px;
+        }   
+        .namei{
+            width: 170px;
+            height: 40px;
+         
+            margin-top: 10px;
+            background-color: #F8F9F9;
+            border :1px solid #C2C8CC;
+        }
+        #bugsuvrity{
+            margin-left: 38px;
+        }
+        #repnamelab{
+            margin-right: 105px;
+            font-weight: bold;
+        }
+        option{
+            color: grey;
+        }
+        body{
+            background-image: url(./bug.jpg);
+            background-size:     cover;  
+                                
+            background-repeat:   no-repeat;
+            background-position: center center; 
+        }
+    </style> 
+           
+          
+</head>
+
+<body>
+    <div id="imgdiv"><img src="./images/img.jpg" alt="" height="50"></div>
+    <div id="maindiv">
+       
+        
+        <form action="./reportbug.php"  method="post" style="text-align: start;">
+            <div style="text-align: center;">
+                <h1 >Report a Bug</h1>
+            </div>
+            <div>
+                <label for="" style="font-weight: bold;">Bug Detail</label>
+            <input type="text" name="bug" class="txtbox" id="bud_detail_border" required>
+            <br>
+            <br>
+               
+                <label  id="repnamelab">Reporter Name</label>
+                <label style="font-weight: bold;">Bug Severity</label>
+                <br>
+                <input type="text" name="reportername" class="namei" required>
+                <select name="bugseverity" id="bugsuvrity" class="namei" required>
+                    <option value="Critical">Critical</option>
+                    <option value="Minor">Minor</option>
+                    <option value="Major">Major</option>
+                    
+                </select>
+                <br>
+            <br>
+            <label for="" style="font-weight: bold;">Bug Type</label>
+            <select name="bugtype" class="txtbox" required>
+                <option value="Functional defects" >Functional Defects</option>
+                <option value="Performance defects">Performance Defects</option>
+                
+                <option value="Security defects">Security Defects</option>
+                <option value="Arithmetic Defects">Arithmetic Defects</option>
+                <option value="Logical Defects">Logical Defects</option>
+                <option value="Syntax Defects">Syntax Defects</option>
+                <option value="Interface Defects">Interface Defects</option>
+
+            </select>
+            <br>
+            <br>
+            <div id="btndiv">
+                <input type="submit" value="Report Bug" name="reportbug" style="background-color: #10363D;
+                      border: none; font-size: 20px;color: white;">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
